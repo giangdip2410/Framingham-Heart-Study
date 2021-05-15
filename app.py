@@ -99,4 +99,7 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=False)
+    app.debug = False
+    from werkzeug.serving import run_simple
+
+    run_simple("localhost", 5000, app)
