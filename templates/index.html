@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>GROUP5-HUS-DSK3</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+
+</head>
+
+<body>
+  <div class="login">
+    <h1>Prediction 10-years risk for cardiovascular disease</h1>
+
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+
+      <input type="text" name="gender" placeholder="Male: 0-Female 1-Male" required="required" />
+      <input type="text" name="age" placeholder="Age" required="required" />
+      <input type="text" name="education" placeholder="Education: 1-High School, 2-High School, 3-College, 4-Degree)"
+        required="required" />
+      <input type="text" name="currentSmoke" placeholder="currentSmoker: 0-No 1-Yes)" required="required" />
+      <input type="text" name="cigarettes" placeholder="cigarettes smoked per day" required="required" />
+      <input type="text" name="amountBP" placeholder="Amount of BP medication the participant is on"
+        required="required" />
+      <input type="text" name="stroke" placeholder="0- no prevalence of stroke, 1-has had occurrences of stroke"
+        required="required" />
+      <input type="text" name="hypertension" placeholder="0-no prevalence of hypertension, 1-prevalence of hypertension"
+        required="required" />
+      <input type="text" name="diabetes" placeholder="0-no diabetes, 1-has diabetes" required="required" />
+      <input type="text" name="cholesterol" placeholder="Total cholesterol" required="required" />
+      <input type="text" name="sytolic" placeholder="Systolic blood pressure" required="required" />
+      <input type="text" name="diastolic" placeholder="Diastolic blood pressure" required="required" />
+      <input type="text" name="bmi" placeholder="BMI: Body Mass Index" required="required" />
+      <input type="text" name="hearrate" placeholder="Heart rate in bpm" required="required" />
+      <input type="text" name="glucose" placeholder="Glucose level (mg/dL)" required="required" />
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <h4 style="color:rgb(9, 10, 10);"> {{prediction_text}} </h4>
+    <br>
+
+  </div>
+
+</body>
+<footer> <small>&copy; Copyright {{currentYear}},2021 Group 5th , MS Class, HUS K3</small> </footer>
+
+</html>
