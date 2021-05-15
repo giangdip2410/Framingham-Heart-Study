@@ -17,9 +17,9 @@ body {
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
-	background: #092756;
-	background: #095fe9;
-	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,200,.4) 100%,rgba(138,114,200,0) 100%), linear-gradient(to bottom,  rgba(57,173,219,.25) 100%,rgba(75, 92, 224, 0.4) 100%), linear-gradient(135deg,  #670d10 50%,#092756 50%);
+	background: #3572d4;
+	background: #578de6;
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(134, 156, 223, 0.4) 100%,rgba(175, 160, 212, 0) 100%), linear-gradient(to bottom,  rgba(69, 183, 228, 0.25) 100%,rgba(75, 92, 224, 0.4) 100%), linear-gradient(135deg,  #92171b 50%,#174692 50%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
 
 }
